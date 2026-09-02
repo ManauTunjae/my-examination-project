@@ -1,2 +1,2 @@
-@import 'https://a.storyblok.com/f/212319/x/e6ccda03b8/blueprint-blank.css';
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
