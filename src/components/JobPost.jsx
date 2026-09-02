@@ -3,14 +3,16 @@ import { storyblokEditable, renderRichText } from '@storyblok/react/rsc';
 export default function JobPost({ blok }) {
 	const richTextHtml = blok.content ? renderRichText(blok.content) : '';
 
-    return (
-        <sektion {...storyblokEditable(blok)}>
-            <h1>{blok.title}</h1>
-            <p>
-                <strong>{blok.department}</strong> - {blok.location}
-            </p>
-            <p>{blok.summary}</p>
-            <div dangerouslySetInnerHTML={{ __html: richTextHtml}}/>
-        </sektion>
-    )
+	return (
+		<section {...storyblokEditable(blok)}>
+			<h1>{blok.title}</h1>
+			<h3>
+				<strong>
+					{blok.department} 📍 {blok.location}{' '}
+				</strong>
+			</h3>
+			<p>{blok.summary}</p>
+			<div dangerouslySetInnerHTML={{ __html: richTextHtml }} />
+		</section>
+	);
 }
