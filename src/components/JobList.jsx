@@ -1,17 +1,15 @@
-import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
+import { storyblokEditable, getStoryblokApi } from '@storyblok/react/rsc';
 
-export default function JobList({blok}) {
+export default function JobList({ blok }) {
     const storyblokApi = getStoryblokApi();
-    const { data } = await storyblokApi.get('cdn/stories', {
-        start_with: "jobs/",
-        content_type: "job-post",
-    })
-
+    const {data} = await storyblokApi.get('cdn/stories', {
+        starts_with: 'jobs/',
+        content_type: 'job-post'
+    });
     const jobs = data.stories;
-
-    return (
-        <section>
-
-        </section>
+	return (
+    <section {...storyblokEditable(blok)}>
+        
+    </section>
     )
 }
