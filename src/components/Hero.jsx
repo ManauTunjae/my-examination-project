@@ -13,10 +13,10 @@ export default function Hero({ blok }) {
 					{blok.title}
 				</h1>
 				<p className="text-lg text-gray-700">{blok.description}</p>
-				<form className="flex gap-3">
+				<form className="flex gap-3" method="get" action="/jobs">
 					<input
 						type="text"
-						name="search"
+						name="q"
 						placeholder={blok.search}
 						className="flex-1 border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
 					/>
