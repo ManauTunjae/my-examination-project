@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import ComingSoon from '@/components/ComingSoon';
-// import JobList from '@/components/JobList';
+import JobList from '@/components/JobList';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
@@ -19,7 +19,7 @@ export const getStoryblokApi = storyblokInit({
 		about: About,
 		contact: Contact,
 		'coming-soon-section': ComingSoon,
-		// 'job-list': JobList,
+		'job-list': JobList,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
