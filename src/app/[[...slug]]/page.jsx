@@ -1,5 +1,6 @@
 import { StoryblokStory } from '@storyblok/react/rsc';
 import { getStoryblokApi } from '@/lib/storyblok';
+import { notFound } from 'next/navigation';
 
 export default async function Page({ params }) {
 	const { slug } = await params;
@@ -11,7 +12,17 @@ export default async function Page({ params }) {
 	};
 
 	const storyblokApi = getStoryblokApi();
-	let { data } = await storyblokApi.get(`cdn/stories/${fullSlug}`, sbParams);
+
+	let data;
+	try {
+		const response = await storyblokApi.get(
+			`cdn/stories/${fullSlug}`,
+			sbParams,
+		);
+		data = response.data;
+	} catch (error) {
+		notFound();
+	}
 
 	return <StoryblokStory story={data.story} />;
 }
