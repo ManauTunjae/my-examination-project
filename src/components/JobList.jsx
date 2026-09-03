@@ -11,7 +11,7 @@ export default async function JobList({ blok }) {
 
 	return (
 		<section {...storyblokEditable(blok)}>
-			<div className="grid md:grid-cols-2 gap-6">
+			<div className="flex flex-col gap-6 p-10 max-w-7xl mx-auto">
 				{jobs.map((job) => (
 					<a
 						key={job.uuid}
