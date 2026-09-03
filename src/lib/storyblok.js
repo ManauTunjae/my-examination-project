@@ -6,6 +6,7 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import ComingSoon from '@/components/ComingSoon';
 import JobList from '@/components/JobList';
+import Footer from '@/components/Footer';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
@@ -20,6 +21,7 @@ export const getStoryblokApi = storyblokInit({
 		contact: Contact,
 		'coming-soon-section': ComingSoon,
 		'job-list': JobList,
+		footer: Footer,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
