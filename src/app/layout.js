@@ -10,8 +10,8 @@ export default function RootLayout({ children }) {
 	const currentYear = new Date().getFullYear();
 	return (
 		<StoryblokProvider>
-			<html lang="en" className="min-h-screen flex flex-col">
-				<body>{children}</body>
+			<html lang="en">
+				<body className="min-h-screen flex flex-col">{children}</body>
 			</html>
 		</StoryblokProvider>
 	);
