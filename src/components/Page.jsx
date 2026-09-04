@@ -3,12 +3,35 @@ import {
 	StoryblokServerComponent,
 } from '@storyblok/react/rsc';
 
-const Page = ({ blok }) => (
-	<main {...storyblokEditable(blok)}>
-		{blok.body?.map((nestedBlok) => (
-			<StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
-		))}
-	</main>
-);
+export default function Page({ blok, ...rest }) {
+	const citiesFilterBlok = blok.body?.find(
+		(nestedBlok) => nestedBlok.component === 'cities-filter',
+	);
 
-export default Page;
+	return (
+		<main {...storyblokEditable(blok)} className="contents">
+			{blok.body?.map((nestedBlok) => {
+				if (nestedBlok.component === 'cities-filter') {
+					return null;
+				}
+				if (nestedBlok.component === 'job-list') {
+					return (
+						<StoryblokServerComponent
+							blok={nestedBlok}
+							key={nestedBlok._uid}
+							citiesFilterBlok={citiesFilterBlok}
+							{...rest}
+						/>
+					);
+				}
+				return (
+					<StoryblokServerComponent
+						blok={nestedBlok}
+						key={nestedBlok._uid}
+						{...rest}
+					/>
+				);
+			})}
+		</main>
+	);
+}
