@@ -11,11 +11,11 @@ export default async function Toolbar({ blok, department = '', q = '' }) {
 	const departments = departmentsData.datasource_entries;
 
 	return (
-		<div {...storyblokEditable(blok)} className="max-w-7xl mx-auto px-10 mb-8">
+		<div {...storyblokEditable(blok)} className="w-full max-w-7xl mx-auto px-10 mb-8">
 			<form
 				method="get"
 				action="/jobs"
-				className="flex flex-col md:flex-row items-stretch md:items-center gap-3"
+				className="flex flex-col md:flex-row items-stretch md:items-center gap-4"
 			>
 				<select
 					name="department"
