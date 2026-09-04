@@ -9,7 +9,7 @@ export default function Page({ blok, ...rest }) {
 	);
 
 	return (
-		<main {...storyblokEditable(blok)}>
+		<main {...storyblokEditable(blok)} className="contents">
 			{blok.body?.map((nestedBlok) => {
 				if (nestedBlok.component === 'cities-filter') {
 					return null;
