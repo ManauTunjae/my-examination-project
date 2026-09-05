@@ -9,6 +9,8 @@ import JobList from '@/components/JobList';
 import Footer from '@/components/Footer';
 import Toolbar from '@/components/Toolbar';
 import CitiesFilter from '@/components/CitiesFilter';
+import DepartmentFilter from '@/components/DepartmentFilter';
+import SearchBar from '@/components/SearchBar';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
@@ -26,6 +28,8 @@ export const getStoryblokApi = storyblokInit({
 		footer: Footer,
 		toolbar: Toolbar,
 		'cities-filter': CitiesFilter,
+		'department-filter': DepartmentFilter,
+		'search-bar': SearchBar,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */

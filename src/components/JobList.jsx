@@ -25,12 +25,12 @@ export default async function JobList({
 			className="max-w-7xl mx-auto px-10 py-12"
 		>
 			<div className="grid md:grid-cols-[1fr_280px] gap-8">
-				<div className="grid gap-5">
+				<div className="grid gap-5 self-start">
 					{jobs.map((job) => (
 						<a
 							key={job.uuid}
 							href={`/jobs/${job.slug}`}
-							className="block border bg-gray-300/10 border-gray-300 rounded-xl p-6 hover:shadow-lg transition-shadow h-45"
+							className="block max-w-5xl border bg-[#fbfcff] border-gray-300 rounded-xl p-6 hover:shadow-xl transition-shadow"
 						>
 							<h2 className="text-xl font-bold text-gray-900 mb-2">
 								{job.content.title}
@@ -39,7 +39,7 @@ export default async function JobList({
 								<strong>{job.content.department}</strong> ·{' '}
 								{job.content.location}
 							</p>
-							<p className="text-gray-700">{job.content.summary}</p>
+							<p className="text-gray-700 line-clamp-3">{job.content.summary}</p>
 						</a>
 					))}
 				</div>
