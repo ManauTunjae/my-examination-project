@@ -30,7 +30,7 @@ export default async function JobList({
 						<a
 							key={job.uuid}
 							href={`/jobs/${job.slug}`}
-							className="block max-w-5xl border bg-gray-300/10 border-gray-300 rounded-xl p-6 hover:shadow-lg transition-shadow"
+							className="block max-w-5xl border bg-[#fbfcff] border-gray-300 rounded-xl p-6 hover:shadow-xl transition-shadow"
 						>
 							<h2 className="text-xl font-bold text-gray-900 mb-2">
 								{job.content.title}

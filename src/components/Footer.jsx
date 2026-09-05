@@ -4,7 +4,7 @@ export default function Footer({ blok }) {
 	return (
 		<section
 			{...storyblokEditable(blok)}
-			className="mt-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-[#d3e3cb] px-8 py-5"
+			className="mt-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-gray-100 px-8 py-5"
 		>
 			<div className="flex items-center gap-4 w-full md:w-auto">
 				{blok.icon?.filename && (
