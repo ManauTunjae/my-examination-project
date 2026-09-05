@@ -1,4 +1,5 @@
 import { storyblokEditable, renderRichText } from '@storyblok/react/rsc';
+import MobileNav from './MobileNav';
 
 export default function Header({ blok }) {
 	return (
@@ -16,6 +17,10 @@ export default function Header({ blok }) {
 				<a href={`/${blok.about?.cached_url}`}>OM OSS</a>
 				<a href={`/${blok.contact.cached_url}`}>KONTAKT</a>
 			</div>
+			<MobileNav
+				aboutUrl={blok.about?.cached_url}
+				contactUrl={blok.contact?.cached_url}
+			/>
 		</section>
 	);
 }
