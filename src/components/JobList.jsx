@@ -30,7 +30,7 @@ export default async function JobList({
 						<a
 							key={job.uuid}
 							href={`/jobs/${job.slug}`}
-							className="block border bg-gray-300/10 border-gray-300 rounded-xl p-6 hover:shadow-lg transition-shadow h-45"
+							className="block border bg-gray-300/10 border-gray-300 rounded-xl p-6 hover:shadow-lg transition-shadow"
 						>
 							<h2 className="text-xl font-bold text-gray-900 mb-2">
 								{job.content.title}
@@ -39,7 +39,7 @@ export default async function JobList({
 								<strong>{job.content.department}</strong> ·{' '}
 								{job.content.location}
 							</p>
-							<p className="text-gray-700">{job.content.summary}</p>
+							<p className="text-gray-700 line-clamp-3">{job.content.summary}</p>
 						</a>
 					))}
 				</div>
