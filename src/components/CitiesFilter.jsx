@@ -10,7 +10,7 @@ export default async function CitiesFilter({ blok, activeCity = '' }) {
 	return (
 		<aside
 			{...storyblokEditable(blok)}
-			className="bg-gray-100 rounded-xl p-6 h-fit"
+			className="bg-[#ebf3e7] rounded-xl p-6 h-fit"
 		>
 			<h3 className="font-bold text-gray-900 mb-4">
 				{blok.cities_title || 'Populära städer'}

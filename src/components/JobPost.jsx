@@ -6,7 +6,7 @@ export default function JobPost({ blok }) {
 	return (
 		<section
 			{...storyblokEditable(blok)}
-			className="min-h-screen bg-white text-gray-900"
+			className="min-h-screen bg-indigo-50/50 eller bg-blue-50/40 text-gray-900"
 		>
 			<div className="max-w-3xl mx-auto px-6 py-12">
 				<h1 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
