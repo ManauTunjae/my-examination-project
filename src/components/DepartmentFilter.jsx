@@ -1,7 +1,4 @@
-import {
-	storyblokEditable,
-	StoryblokServerComponent,
-} from '@storyblok/react/src';
+import { storyblokEditable, getStoryblokApi } from '@storyblok/react/rsc';
 
 export default async function DepartmentFilter({ blok, department = '' }) {
 	const storyblokApi = getStoryblokApi();
