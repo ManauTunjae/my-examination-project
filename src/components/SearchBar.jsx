@@ -9,7 +9,7 @@ export default async function SearchBar({ blok, q = '' }) {
 			<input
 				type="text"
 				name="q"
-				defaultValue={q}
+				defaultValue=""
 				placeholder={
 					blok.search_placeholder || 'Sök jobb, plats eller kompetens'
 				}
