@@ -12,7 +12,7 @@ export default async function JobList({
 	const { data } = await storyblokApi.get('cdn/stories', {
 		starts_with: 'jobs/',
 		content_type: 'job-post',
-		version: 'draft',
+		version: 'published',
 		...(department && { filter_query: { department: { in: department } } }),
 		...(city && { filter_query: { city: { in: city } } }),
 		...(q && { search_term: q }),
