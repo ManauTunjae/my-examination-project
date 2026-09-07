@@ -15,7 +15,7 @@ export default async function Page({ params, searchParams }) {
 	let data;
 	try {
 		const response = await storyblokApi.get(`cdn/stories/${fullSlug}`, {
-			version: 'published',
+			version: 'draft',
 		});
 		data = response.data;
 	} catch (error) {
@@ -36,7 +36,7 @@ export async function generateMetadata() {
 	const storyblokApi = getStoryblokApi();
 
 	const { data } = await storyblokApi.get('cdn/stories/jobs', {
-		version: 'published',
+		version: 'draft',
 	});
 	const content = data.story.content;
 	return {
